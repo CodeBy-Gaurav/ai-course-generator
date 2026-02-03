@@ -1,0 +1,93 @@
+<svg
+  width="400"
+  height="400"
+  viewBox="0 0 400 400"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Meditating woman illustration"
+>
+
+  <!-- Head -->
+  <circle cx="200" cy="70" r="28" fill="#FFC6A0"/>
+
+  <!-- Hair -->
+  <path
+    d="M170 70
+       C170 40, 230 40, 230 75
+       C230 95, 210 105, 200 105
+       C180 105, 170 95, 170 80 Z"
+    fill="#6B3A2A"
+  />
+  <path
+    d="M230 80
+       C255 95, 255 125, 230 130 Z"
+    fill="#6B3A2A"
+  />
+
+  <!-- Neck -->
+  <rect x="188" y="95" width="24" height="22" rx="10" fill="#FFC6A0"/>
+
+  <!-- Torso -->
+  <path
+    d="M155 120
+       C150 175, 250 175, 245 120
+       Z"
+    fill="#FFC6A0"
+  />
+
+  <!-- Top -->
+  <path
+    d="M155 120
+       C160 150, 240 150, 245 120
+       Z"
+    fill="#B66ACD"
+  />
+
+  <!-- Left Arm -->
+  <path
+    d="M155 135
+       C115 175, 95 200, 105 225
+       C115 245, 145 225, 155 205
+       Z"
+    fill="#FFC6A0"
+  />
+
+  <!-- Right Arm -->
+  <path
+    d="M245 135
+       C285 175, 305 200, 295 225
+       C285 245, 255 225, 245 205
+       Z"
+    fill="#FFC6A0"
+  />
+
+  <!-- Hands -->
+  <ellipse cx="125" cy="235" rx="18" ry="10" fill="#FFC6A0"/>
+  <ellipse cx="275" cy="235" rx="18" ry="10" fill="#FFC6A0"/>
+
+  <!-- Legs -->
+  <path
+    d="M120 260
+       C60 300, 80 340, 160 330
+       C210 325, 190 285, 170 260
+       Z"
+    fill="#9E3B8F"
+  />
+
+  <path
+    d="M280 260
+       C340 300, 320 340, 240 330
+       C190 325, 210 285, 230 260
+       Z"
+    fill="#9E3B8F"
+  />
+
+  <!-- Inner Crossed Leg -->
+  <path
+    d="M170 260
+       C185 290, 215 290, 230 260
+       Z"
+    fill="#FFC6A0"
+  />
+
+</svg>

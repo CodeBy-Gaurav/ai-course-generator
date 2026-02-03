@@ -1,0 +1,36 @@
+<svg
+  width="420"
+  height="80"
+  viewBox="0 0 420 80"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="LearnGen AI Logo"
+>
+  <!-- Icon -->
+  <g transform="translate(10,16)">
+    <!-- Book shape -->
+    <path
+      d="M10 8 C10 4, 18 4, 18 8 V40 C18 44, 10 44, 10 40 Z"
+      fill="#5B4BFF"
+    />
+    <path
+      d="M18 8 C18 4, 26 4, 26 8 V40 C26 44, 18 44, 18 40 Z"
+      fill="#7A6CFF"
+    />
+    <!-- Spark -->
+    <circle cx="18" cy="0" r="4" fill="#5B4BFF" />
+  </g>
+
+  <!-- Text -->
+  <text
+    x="70"
+    y="52"
+    fill="#5B4BFF"
+    font-size="36"
+    font-weight="700"
+    font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+    letter-spacing="0.5"
+  >
+    LearnGen AI
+  </text>
+</svg>

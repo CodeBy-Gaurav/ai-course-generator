@@ -1,0 +1,101 @@
+<svg
+  width="420"
+  height="420"
+  viewBox="0 0 420 420"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Puzzle verification illustration"
+>
+
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8FD3FF"/>
+      <stop offset="100%" stop-color="#4BA3F2"/>
+    </linearGradient>
+
+    <linearGradient id="yellowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD86B"/>
+      <stop offset="100%" stop-color="#FF9F43"/>
+    </linearGradient>
+
+    <linearGradient id="pinkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6B9C"/>
+      <stop offset="100%" stop-color="#FF3D6E"/>
+    </linearGradient>
+
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B6E59E"/>
+      <stop offset="100%" stop-color="#5CB85C"/>
+    </linearGradient>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="8" dy="10" stdDeviation="14" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Blue puzzle -->
+  <path
+    d="M90 80
+       C110 40, 170 40, 190 80
+       C230 80, 240 120, 210 140
+       C240 170, 210 220, 180 200
+       C160 240, 100 230, 110 190
+       C70 190, 60 140, 90 130
+       Z"
+    fill="url(#blueGrad)"
+    filter="url(#softShadow)"
+  />
+
+  <!-- Yellow puzzle -->
+  <path
+    d="M120 210
+       C140 170, 200 170, 220 210
+       C260 210, 270 250, 240 270
+       C270 300, 240 340, 200 320
+       C180 360, 120 350, 130 310
+       C90 310, 80 260, 120 250
+       Z"
+    fill="url(#yellowGrad)"
+    filter="url(#softShadow)"
+  />
+
+  <!-- Pink puzzle -->
+  <path
+    d="M230 210
+       C250 170, 310 170, 330 210
+       C370 210, 380 250, 350 270
+       C380 300, 350 340, 310 320
+       C290 360, 230 350, 240 310
+       C200 310, 190 260, 230 250
+       Z"
+    fill="url(#pinkGrad)"
+    filter="url(#softShadow)"
+  />
+
+  <!-- Check badge -->
+  <circle
+    cx="210"
+    cy="210"
+    r="52"
+    fill="url(#greenGrad)"
+    filter="url(#softShadow)"
+  />
+
+  <!-- Check mark -->
+  <path
+    d="M190 210 L205 225 L235 195"
+    stroke="#FFFFFF"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Floating pills -->
+  <rect x="250" y="60" width="24" height="56" rx="12" fill="#FFC857"/>
+  <rect x="300" y="80" width="60" height="24" rx="12" fill="#6BCF77"/>
+  <rect x="320" y="140" width="50" height="20" rx="10" fill="#6EC6FF"/>
+
+</svg>
