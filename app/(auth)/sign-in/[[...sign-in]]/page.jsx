@@ -1,77 +1,144 @@
-'use client'
+"use client";
 
-import { SignIn } from '@clerk/nextjs'
+import { SignIn } from "@clerk/nextjs";
+import Link from "next/link";
+import {
+  HiOutlineSparkles,
+  HiOutlineVideoCamera,
+  HiOutlineAcademicCap,
+  HiOutlineArrowLeft,
+} from "react-icons/hi2";
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <section className="flex flex-col lg:flex-row lg:grid lg:grid-cols-2 h-full">
-        {/* Left Section - Content */}
-        <div className="hidden lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-12 bg-gradient-to-b from-blue-600 to-indigo-700 text-white">
-          <div className="max-w-md">
-            <div className="mb-8">
-              <h1 className="text-4xl font-bold mb-4">LearnGen AI</h1>
-              <div className="h-1 w-12 bg-blue-300 rounded"></div>
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
+        {/* Left Side: Branding & Value Props */}
+        <div className="hidden lg:flex lg:col-span-6 xl:col-span-5 flex-col justify-between p-12 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-950 text-white relative overflow-hidden">
+          {/* Subtle background glow */}
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-sm text-purple-200 hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full backdrop-blur-xs"
+            >
+              <HiOutlineArrowLeft />
+              Back to Home
+            </Link>
+
+            <div className="mt-16 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-purple-300 text-xs font-semibold uppercase tracking-wider">
+                <HiOutlineSparkles />
+                AI-Powered Learning
+              </div>
+              <h1 className="text-4xl xl:text-5xl font-extrabold leading-tight tracking-tight">
+                Unlock Your Personal Learning Journey.
+              </h1>
+              <p className="text-purple-200 text-base leading-relaxed max-w-md">
+                Create structured, multi-chapter video masterclasses on any topic with the power of Google Gemini AI.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature Bullets */}
+          <div className="space-y-4 relative z-10 pt-10 border-t border-purple-800/50">
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+                <HiOutlineSparkles />
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm">Instant Curriculum Outlines</h4>
+                <p className="text-xs text-purple-200 mt-0.5">
+                  AI writes comprehensive lesson summaries and key takeaways.
+                </p>
+              </div>
             </div>
 
-            <h2 className="text-3xl font-bold mb-6">
-              Generate Personalized Courses in Minutes
-            </h2>
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+                <HiOutlineVideoCamera />
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm">Automated Video Lessons</h4>
+                <p className="text-xs text-purple-200 mt-0.5">
+                  Embeds top-rated YouTube tutorials for every lesson.
+                </p>
+              </div>
+            </div>
 
-            <p className="text-blue-100 text-lg leading-relaxed mb-8">
-              LearnGen AI uses artificial intelligence to create custom learning paths tailored to your goals. Whether you're a student, professional, or lifelong learner, we'll help you master new skills faster.
-            </p>
-
-            <ul className="space-y-4 text-blue-50">
-              <li className="flex items-start">
-                <span className="inline-block w-6 h-6 bg-blue-300 rounded-full mr-3 mt-0.5"></span>
-                <span>AI-powered course generation</span>
-              </li>
-              <li className="flex items-start">
-                <span className="inline-block w-6 h-6 bg-blue-300 rounded-full mr-3 mt-0.5"></span>
-                <span>Personalized learning experience</span>
-              </li>
-              <li className="flex items-start">
-                <span className="inline-block w-6 h-6 bg-blue-300 rounded-full mr-3 mt-0.5"></span>
-                <span>Learn at your own pace</span>
-              </li>
-            </ul>
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+                <HiOutlineAcademicCap />
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm">Interactive Code & Notes</h4>
+                <p className="text-xs text-purple-200 mt-0.5">
+                  Syntax-highlighted code blocks with 1-click copy.
+                </p>
+              </div>
+            </div>
           </div>
+
+          <p className="text-xs text-purple-300/80 relative z-10">
+            &copy; {new Date().getFullYear()} AI Course Generator. All rights reserved.
+          </p>
         </div>
 
-        {/* Right Section - Sign In Form */}
-        <div className="flex flex-col justify-center items-center px-6 py-12 lg:py-0 lg:px-0 bg-white lg:bg-gray-50">
-          <div className="w-full max-w-md">
-            <div className="mb-8 text-center lg:text-left">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-              <p className="text-gray-600">Sign in to your LearnGen AI account</p>
+        {/* Right Side: Clerk Sign In Form */}
+        <div className="lg:col-span-6 xl:col-span-7 flex flex-col justify-center items-center p-6 sm:p-12">
+          <div className="w-full max-w-md space-y-6">
+            <div className="lg:hidden mb-6">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-primary transition-colors"
+              >
+                <HiOutlineArrowLeft />
+                Back to Home
+              </Link>
             </div>
 
-            <SignIn 
+            <div className="text-center lg:text-left space-y-1">
+              <h2 className="text-3xl font-extrabold text-gray-900">
+                Welcome Back
+              </h2>
+              <p className="text-sm text-gray-500">
+                Sign in to manage your AI courses and continue learning.
+              </p>
+            </div>
+
+            <SignIn
               appearance={{
                 elements: {
                   rootBox: "w-full",
-                  card: "bg-transparent shadow-none border-0",
+                  card: "bg-white shadow-md border border-gray-100 rounded-2xl p-6",
                   headerTitle: "hidden",
                   headerSubtitle: "hidden",
-                  socialButtonsBlockButton: "border border-gray-300 text-gray-700 font-medium py-2.5 rounded-lg hover:bg-gray-50 transition",
+                  socialButtonsBlockButton:
+                    "border border-gray-200 text-gray-700 font-medium py-2.5 rounded-xl hover:bg-gray-50 transition-colors",
                   socialButtonsBlockButtonText: "text-sm font-medium",
-                  formFieldInput: "border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  footerActionLink: "text-blue-600 hover:text-blue-700",
-                  formButtonPrimary: "bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg py-2.5 transition"
-                }
+                  formFieldInput:
+                    "border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm",
+                  footerActionLink: "text-primary hover:text-primary/80 font-semibold",
+                  formButtonPrimary:
+                    "bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl py-2.5 shadow-sm transition-all",
+                },
               }}
             />
 
-            <p className="mt-6 text-center text-gray-600">
-              Don't have an account?{' '}
-              <a href="/sign-up" className="text-blue-600 font-medium hover:text-blue-700">
-                Sign up here
-              </a>
+            <p className="text-center text-xs text-gray-500 pt-2">
+              Don&apos;t have an account?{" "}
+              <Link
+                href="/sign-up"
+                className="text-primary font-semibold hover:underline"
+              >
+                Sign up free
+              </Link>
             </p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
-  )
+  );
 }

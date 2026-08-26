@@ -1,12 +1,14 @@
-import React from 'react'
-import AddCourse from './_components/AddCourse'
+import React from "react";
+import AddCourse from "./_components/AddCourse";
+import UserCourseList from "./_components/UserCourseList";
 
 function Dashboard() {
   return (
     <div>
-        <AddCourse />
+      <AddCourse />
+      <UserCourseList />
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
