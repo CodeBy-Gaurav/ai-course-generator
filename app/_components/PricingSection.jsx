@@ -10,10 +10,10 @@ import Link from "next/link";
 
 function PricingSection() {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-850 transition-colors" id="pricing">
+    <section className="py-24 bg-slate-50/70 dark:bg-slate-950/70 border-t border-slate-200/80 dark:border-white/[0.08] transition-colors relative z-10" id="pricing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary dark:text-cyan-300 bg-primary/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-3.5 py-1 rounded-full">
             Transparent Pricing
           </span>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
@@ -42,7 +42,7 @@ function PricingSection() {
               <ul className="space-y-3.5 pt-6 border-t border-slate-100 dark:border-slate-800 text-sm text-slate-600 dark:text-slate-300">
                 <li className="flex items-center gap-2.5">
                   <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
-                  <span><strong>5 Course Generation Credits</strong></span>
+                  <span><strong>5 Masterclass Creation Credits</strong></span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
@@ -50,7 +50,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
-                  <span>Curated YouTube video lesson embeds</span>
+                  <span>Curated video playlists &amp; lesson embeds</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
@@ -72,13 +72,13 @@ function PricingSection() {
           </div>
 
           {/* Pro Unlimited Tier (₹499) */}
-          <div className="border-2 border-primary dark:border-purple-500 rounded-3xl p-8 sm:p-10 bg-gradient-to-b from-white via-purple-50/20 to-purple-50/60 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-900 shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div className="border-2 border-cyan-500/80 rounded-3xl p-8 sm:p-10 bg-gradient-to-b from-white via-sky-50/20 to-sky-50/40 dark:from-slate-950 dark:via-cyan-950/15 dark:to-zinc-950 shadow-xl shadow-cyan-500/5 flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-primary text-white text-[11px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider shadow-xs">
               Popular
             </div>
 
             <div className="space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 bg-cyan-500/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-full">
                 Pro Unlimited
               </span>
               <div className="mt-2 flex items-baseline gap-1">
@@ -89,31 +89,31 @@ function PricingSection() {
                 For educators, professionals, and power learners requiring unlimited creation.
               </p>
 
-              <ul className="space-y-3.5 pt-6 border-t border-purple-100 dark:border-purple-900/50 text-sm text-slate-700 dark:text-slate-200">
+              <ul className="space-y-3.5 pt-6 border-t border-slate-100 dark:border-zinc-800 text-sm text-slate-700 dark:text-slate-200">
                 <li className="flex items-center gap-2.5 font-semibold text-slate-900 dark:text-white">
-                  <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                  <span>Unlimited AI Course Generations</span>
+                  <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                  <span>Unlimited Course Creations</span>
                 </li>
                 <li className="flex items-center gap-2.5 font-medium">
-                  <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                  <span>4-Second Parallel Generation Pipeline</span>
+                  <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                  <span>4-Second Parallel Assembly Pipeline</span>
                 </li>
                 <li className="flex items-center gap-2.5 font-medium">
-                  <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                  <span>Custom Cloudinary Image Uploads</span>
+                  <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                  <span>Custom Cloudinary Cover Art Uploads</span>
                 </li>
                 <li className="flex items-center gap-2.5 font-medium">
-                  <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                  <span>Priority Google Gemini AI Processing</span>
+                  <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                  <span>Priority Curriculum Engine Processing</span>
                 </li>
                 <li className="flex items-center gap-2.5 font-medium">
-                  <HiOutlineShieldCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
+                  <HiOutlineShieldCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
                   <span>24/7 Priority Support</span>
                 </li>
               </ul>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-purple-100 dark:border-purple-900/50">
+            <div className="mt-8 pt-4 border-t border-slate-100 dark:border-zinc-800">
               <Link href="/dashboard/upgrade" className="block">
                 <Button className="w-full py-3.5 rounded-2xl bg-primary hover:bg-primary/90 text-white font-bold text-base shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.02]">
                   <HiOutlineRocketLaunch className="text-xl" />

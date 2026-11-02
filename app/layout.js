@@ -16,12 +16,16 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "AI Course Generator — Complete AI Video Masterclasses in Seconds",
   description:
-    "Generate structured multi-chapter educational courses with AI lesson notes, runnable code, and curated YouTube video tutorials.",
+    "Generate structured multi-chapter educational courses with interactive lesson notes, runnable code, and curated video playlists.",
 };
+
+const publishableKey =
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+  "pk_test_c2VjdXJlLXdhcnRob2ctNTQuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={publishableKey}>
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-200`}

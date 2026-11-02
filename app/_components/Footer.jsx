@@ -1,19 +1,21 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Logo from "./Logo";
 
 function Footer() {
   return (
-    <footer className="bg-slate-950 text-gray-400 py-16 border-t border-gray-900">
+    <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-900">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-900">
           <div className="space-y-4 md:col-span-2">
-            <Link href="/" className="inline-block">
-              <Image src="/logo.svg" alt="AI Course Generator" width={160} height={45} className="brightness-150" />
-            </Link>
-            <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              Transform any prompt or topic into structured multi-chapter educational masterclasses powered by Google Gemini AI and YouTube video tutorials.
+            <Logo href="/" size="md" />
+            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+              Transform any prompt or topic into structured multi-chapter educational masterclasses with modular chapters, curated video playlists, and interactive notes.
             </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>All Systems Operational &bull; Instant Assembly Active</span>
+            </div>
           </div>
 
           <div>
@@ -22,22 +24,22 @@ function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/explore" className="hover:text-white transition-colors">
+                <Link href="/explore" className="hover:text-cyan-400 transition-colors">
                   Community Courses
                 </Link>
               </li>
               <li>
-                <Link href="/create-course" className="hover:text-white transition-colors">
-                  Create AI Course
+                <Link href="/create-course" className="hover:text-cyan-400 transition-colors">
+                  Create Course
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard" className="hover:text-white transition-colors">
+                <Link href="/dashboard" className="hover:text-cyan-400 transition-colors">
                   My Dashboard
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard/upgrade" className="hover:text-white transition-colors">
+                <Link href="/dashboard/upgrade" className="hover:text-cyan-400 transition-colors">
                   Pricing Plans (₹499)
                 </Link>
               </li>
@@ -46,27 +48,27 @@ function Footer() {
 
           <div>
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">
-              Technology
+              Infrastructure
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li className="text-gray-400">Google Gemini 3.6 Flash</li>
-              <li className="text-gray-400">YouTube Data API v3</li>
-              <li className="text-gray-400">Neon Serverless Postgres</li>
-              <li className="text-gray-400">Cloudinary CDN Storage</li>
+              <li className="text-slate-400">Adaptive Curriculum Engine</li>
+              <li className="text-slate-400">Curated Video Playlists</li>
+              <li className="text-slate-400">High-Performance Database</li>
+              <li className="text-slate-400">Cloud Media Storage</li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} AI Course Generator. Built for modern learners.</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>&copy; {new Date().getFullYear()} LearnGen Studio. Built for modern learners.</p>
           <div className="flex gap-6">
-            <Link href="/explore" className="hover:text-gray-300">
+            <Link href="/explore" className="hover:text-slate-300">
               Explore
             </Link>
-            <Link href="/dashboard" className="hover:text-gray-300">
+            <Link href="/dashboard" className="hover:text-slate-300">
               Dashboard
             </Link>
-            <Link href="/dashboard/upgrade" className="hover:text-gray-300">
+            <Link href="/dashboard/upgrade" className="hover:text-slate-300">
               Pro Plan
             </Link>
           </div>

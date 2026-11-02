@@ -6,31 +6,61 @@
   role="img"
   aria-label="LearnGen AI Logo"
 >
-  <!-- Icon -->
-  <g transform="translate(10,16)">
-    <!-- Book shape -->
-    <path
-      d="M10 8 C10 4, 18 4, 18 8 V40 C18 44, 10 44, 10 40 Z"
-      fill="#5B4BFF"
-    />
-    <path
-      d="M18 8 C18 4, 26 4, 26 8 V40 C26 44, 18 44, 18 40 Z"
-      fill="#7A6CFF"
-    />
-    <!-- Spark -->
-    <circle cx="18" cy="0" r="4" fill="#5B4BFF" />
+  <defs>
+    <linearGradient id="cyanG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="emeraldG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Industrial Glyph -->
+  <g transform="translate(14, 12)">
+    <rect width="56" height="56" rx="16" fill="#090a0f" stroke="rgba(56, 189, 248, 0.4)" stroke-width="2" />
+    <path d="M28 10 L44 19 V37 L28 46 L12 37 V19 Z" stroke="url(#cyanG)" stroke-width="2.5" fill="none" stroke-linejoin="round" />
+    <path d="M28 10 V28 L44 37" stroke="url(#cyanG)" stroke-width="2" fill="none" stroke-linejoin="round" />
+    <path d="M28 28 L12 37" stroke="url(#emeraldG)" stroke-width="2" fill="none" stroke-linejoin="round" />
+    <circle cx="28" cy="28" r="3.5" fill="#38bdf8" />
   </g>
 
-  <!-- Text -->
+  <!-- Wordmark -->
   <text
-    x="70"
-    y="52"
-    fill="#5B4BFF"
-    font-size="36"
-    font-weight="700"
-    font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+    x="86"
+    y="44"
+    fill="#0f172a"
+    font-size="32"
+    font-weight="900"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    letter-spacing="-0.5"
+  >
+    Learn<tspan fill="#0284c7">Gen</tspan>
+  </text>
+
+  <!-- Subtitle Pill -->
+  <rect x="238" y="24" width="68" height="24" rx="6" fill="rgba(14, 165, 233, 0.12)" stroke="rgba(14, 165, 233, 0.3)" stroke-width="1.5" />
+  <text
+    x="248"
+    y="40"
+    fill="#0369a1"
+    font-size="11"
+    font-weight="800"
+    font-family="system-ui, monospace"
+    letter-spacing="1"
+  >
+    STUDIO
+  </text>
+  <text
+    x="88"
+    y="60"
+    fill="#64748b"
+    font-size="11"
+    font-weight="600"
+    font-family="system-ui, sans-serif"
     letter-spacing="0.5"
   >
-    LearnGen AI
+    NEXT-GEN EDTECH PLATFORM
   </text>
 </svg>

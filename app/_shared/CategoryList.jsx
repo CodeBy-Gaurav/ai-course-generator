@@ -1,21 +1,50 @@
 export default [
-    {
-        id:1,
-        name:"Programming",
-        icon:"/coding.svg",
-        prompt:""
-    },
-    {
-        id:2,
-        name:"Health",
-        icon:"/lotus.svg",
-        prompt:""
-    },
-    {
-        id:3,
-        name:"Creative",
-        icon:"/creative.svg",
-        prompt:""
-    }
-    
-]
+  {
+    id: 1,
+    name: "Programming & Tech",
+    tag: "Software Engineering",
+    description: "Web development, system architecture, APIs, and cloud infrastructure.",
+    icon: "/coding.svg",
+    prompt: "Focus on clean architecture, runnable code examples, and production patterns.",
+  },
+  {
+    id: 2,
+    name: "AI & Data Science",
+    tag: "Machine Learning",
+    description: "Deep learning, LLM fine-tuning, computer vision, and data pipelines.",
+    icon: "/globe.svg",
+    prompt: "Include mathematical intuition, PyTorch/Python workflows, and model evaluations.",
+  },
+  {
+    id: 3,
+    name: "Business & Finance",
+    tag: "Strategy & Capital",
+    description: "Financial engineering, venture capital, product strategy, and analytics.",
+    icon: "/window.svg",
+    prompt: "Emphasize quantitative metrics, decision frameworks, and real case studies.",
+  },
+  {
+    id: 4,
+    name: "UI/UX & Product Design",
+    tag: "Creative Direction",
+    description: "Figma design systems, typography, user heuristics, and interaction design.",
+    icon: "/creative.svg",
+    prompt: "Focus on visual hierarchy, accessibility, and component-driven design tokens.",
+  },
+  {
+    id: 5,
+    name: "Health & Wellness",
+    tag: "Human Optimization",
+    description: "Strength training, cardiovascular conditioning, ergonomics, and longevity.",
+    icon: "/lotus.svg",
+    prompt: "Provide evidence-based protocols, movement biomechanics, and actionable routines.",
+  },
+  {
+    id: 6,
+    name: "Science & Engineering",
+    tag: "Applied Physics",
+    description: "Hardware electronics, robotics, mathematics, and quantum fundamentals.",
+    icon: "/file.svg",
+    prompt: "Cover first-principles physics, circuit schematics, and mathematical derivations.",
+  },
+];

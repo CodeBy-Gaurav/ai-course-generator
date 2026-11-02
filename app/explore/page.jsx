@@ -13,7 +13,7 @@ import {
   HiOutlineBookOpen,
 } from "react-icons/hi2";
 
-const CATEGORIES = ["All", "Programming", "Health", "Creative"];
+const CATEGORIES = ["All", "Tech", "AI", "Business", "Design", "Health", "Science"];
 
 function PublicExplorePage() {
   const [courses, setCourses] = useState([]);
@@ -51,7 +51,10 @@ function PublicExplorePage() {
 
     const matchesCategory =
       selectedCategory === "All" ||
-      category.includes(selectedCategory.toLowerCase());
+      category.includes(selectedCategory.toLowerCase()) ||
+      (selectedCategory === "Tech" && category.includes("program")) ||
+      (selectedCategory === "AI" && (category.includes("ai") || category.includes("data"))) ||
+      (selectedCategory === "Design" && (category.includes("design") || category.includes("creative")));
 
     return matchesSearch && matchesCategory;
   });
@@ -63,15 +66,15 @@ function PublicExplorePage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Header Title Banner */}
         <div className="text-center space-y-3 mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 dark:bg-purple-950/60 text-primary dark:text-purple-300 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cyan-500/10 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider">
             <HiOutlineSparkles />
-            Public AI Courses
+            Community Library
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Explore Community Courses
+            Explore Community Masterclasses
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Discover complete, AI-generated courses with video tutorials created by educators, developers, and learners worldwide.
+            Discover comprehensive video courses and structured curriculums created by educators, developers, and learners worldwide.
           </p>
         </div>
 
@@ -136,7 +139,7 @@ function PublicExplorePage() {
         <div>
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-              <HiOutlineBookOpen className="text-primary dark:text-purple-400" />
+              <HiOutlineBookOpen className="text-cyan-600 dark:text-cyan-400" />
               <span>
                 {selectedCategory === "All" ? "All Courses" : `${selectedCategory} Courses`}
               </span>
@@ -168,7 +171,7 @@ function PublicExplorePage() {
             </div>
           ) : (
             <div className="text-center py-20 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 space-y-4">
-              <div className="w-16 h-16 bg-primary/10 dark:bg-purple-950/60 text-primary dark:text-purple-300 text-3xl rounded-2xl flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-cyan-500/10 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-300 border border-cyan-500/20 text-3xl rounded-2xl flex items-center justify-center mx-auto">
                 <HiOutlineMagnifyingGlass />
               </div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">

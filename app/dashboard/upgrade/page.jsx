@@ -12,20 +12,20 @@ import Link from "next/link";
 function UpgradePage() {
   return (
     <div className="max-w-5xl mx-auto py-6 space-y-10">
-      <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-purple-400 transition-colors">
+      <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-cyan-400 transition-colors">
         <HiOutlineArrowLeft />
         <Link href="/dashboard">Back to Dashboard</Link>
       </div>
 
       <div className="text-center space-y-3">
-        <span className="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-3.5 py-1 rounded-full">
+        <span className="text-xs font-bold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 bg-cyan-500/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-3.5 py-1 rounded-full">
           Simple Transparent Pricing
         </span>
         <h1 className="font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white tracking-tight">
           Supercharge Your Learning with Pro
         </h1>
         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-          Upgrade to unlock unlimited AI course generations, priority Gemini processing, and high-definition video lessons.
+          Upgrade to unlock unlimited AI course generations, priority high-speed processing, and high-definition video lessons.
         </p>
       </div>
 
@@ -48,15 +48,15 @@ function UpgradePage() {
             <ul className="space-y-3 pt-6 border-t border-slate-100 dark:border-slate-800 text-sm text-slate-600 dark:text-slate-300">
               <li className="flex items-center gap-2.5">
                 <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
-                <span><strong>5 Course Generation Credits</strong></span>
+                <span><strong>5 Masterclass Creation Credits</strong></span>
               </li>
               <li className="flex items-center gap-2.5">
                 <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
-                <span>Automated multi-chapter outlines</span>
+                <span>Modular multi-chapter syllabus generator</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
-                <span>Embedded YouTube video lessons</span>
+                <span>Curated video playlists &amp; lesson embeds</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <HiOutlineCheck className="text-green-500 text-lg shrink-0" />
@@ -77,13 +77,13 @@ function UpgradePage() {
         </div>
 
         {/* Pro Unlimited Tier (₹499) */}
-        <div className="border-2 border-primary dark:border-purple-500 rounded-3xl p-8 bg-gradient-to-b from-white via-purple-50/30 to-purple-50/60 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-900 shadow-xl flex flex-col justify-between relative overflow-hidden">
+        <div className="border-2 border-cyan-500/80 rounded-3xl p-8 bg-gradient-to-b from-white via-sky-50/20 to-sky-50/40 dark:from-slate-950 dark:via-cyan-950/15 dark:to-zinc-950 shadow-xl shadow-cyan-500/5 flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 bg-primary text-white text-[11px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider shadow-xs">
             Most Popular
           </div>
 
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 bg-cyan-500/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-full">
               Pro Unlimited
             </span>
             <div className="mt-2 flex items-baseline gap-1">
@@ -94,35 +94,35 @@ function UpgradePage() {
               For power learners, students, and educators who need limitless course creation.
             </p>
 
-            <ul className="space-y-3.5 pt-6 border-t border-purple-100 dark:border-purple-900/50 text-sm text-slate-700 dark:text-slate-200">
+            <ul className="space-y-3.5 pt-6 border-t border-slate-100 dark:border-zinc-800 text-sm text-slate-700 dark:text-slate-200">
               <li className="flex items-center gap-2.5 font-semibold text-slate-900 dark:text-white">
-                <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                <span>Unlimited AI Course Generations</span>
+                <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                <span>Unlimited Course Creations</span>
               </li>
               <li className="flex items-center gap-2.5 font-medium">
-                <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                <span>Instant High-Speed Parallel Generation</span>
+                <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                <span>Instant High-Speed Parallel Pipeline</span>
               </li>
               <li className="flex items-center gap-2.5 font-medium">
-                <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                <span>Custom Cloudinary Course Banner Uploads</span>
+                <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                <span>Custom Cloudinary Cover Art Uploads</span>
               </li>
               <li className="flex items-center gap-2.5 font-medium">
-                <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
-                <span>Priority Google Gemini AI Processing</span>
+                <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
+                <span>Priority Curriculum Engine Processing</span>
               </li>
               <li className="flex items-center gap-2.5 font-medium">
-                <HiOutlineCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
+                <HiOutlineCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
                 <span>PDF &amp; Markdown Notes Export</span>
               </li>
               <li className="flex items-center gap-2.5 font-medium">
-                <HiOutlineShieldCheck className="text-primary dark:text-purple-400 text-xl shrink-0" />
+                <HiOutlineShieldCheck className="text-cyan-600 dark:text-cyan-400 text-xl shrink-0" />
                 <span>24/7 Dedicated Support</span>
               </li>
             </ul>
           </div>
 
-          <div className="mt-8 space-y-2 pt-4 border-t border-purple-100 dark:border-purple-900/50">
+          <div className="mt-8 space-y-2 pt-4 border-t border-slate-100 dark:border-zinc-800">
             <Button className="w-full py-3.5 rounded-2xl bg-primary hover:bg-primary/90 text-white font-bold text-base shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.02]">
               <HiOutlineRocketLaunch className="text-xl" />
               <span>Upgrade to Pro — ₹499 / Month</span>

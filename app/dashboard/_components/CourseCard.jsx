@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   HiOutlineBookOpen,
   HiOutlinePlay,
+  HiOutlineCheckCircle,
 } from "react-icons/hi2";
 import DropdownOption from "./DropdownOption";
 import { db } from "@/configs/db";
@@ -16,6 +17,21 @@ import { resolveBannerUrl } from "@/lib/bannerGenerator";
 function CourseCard({ course, refreshData, displayUser = false }) {
   const courseData = normalizeCourse(course);
   const bannerUrl = resolveBannerUrl(course);
+  const [completedCount, setCompletedCount] = useState(0);
+
+  useEffect(() => {
+    try {
+      if (course?.courseId) {
+        const saved = localStorage.getItem(`lgn_progress_${course.courseId}`);
+        if (saved) {
+          const arr = JSON.parse(saved);
+          if (Array.isArray(arr)) {
+            setCompletedCount(arr.length);
+          }
+        }
+      }
+    } catch (e) {}
+  }, [course?.courseId]);
 
   const handleOnDelete = async () => {
     try {
@@ -34,9 +50,10 @@ function CourseCard({ course, refreshData, displayUser = false }) {
   };
 
   const chapterCount = courseData?.noOfChapters || 0;
+  const progressPct = chapterCount > 0 ? Math.min(100, Math.round((completedCount / chapterCount) * 100)) : 0;
 
   return (
-    <div className="group relative bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-primary/40 dark:hover:border-purple-500/40 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+    <div className="group relative bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-cyan-500/40 dark:hover:border-cyan-500/40 rounded-3xl shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
       <div>
         {/* Banner with floating badges */}
         <Link href={`/course/${course?.courseId}`} className="block relative overflow-hidden">
@@ -73,7 +90,7 @@ function CourseCard({ course, refreshData, displayUser = false }) {
         <div className="p-5 space-y-3">
           <div className="flex items-start justify-between gap-2">
             <Link href={`/course/${course?.courseId}`} className="flex-1">
-              <h3 className="font-bold text-base text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary dark:group-hover:text-purple-400 transition-colors leading-snug">
+              <h3 className="font-bold text-base text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors leading-snug">
                 {courseData?.name || course?.name}
               </h3>
             </Link>
@@ -86,18 +103,37 @@ function CourseCard({ course, refreshData, displayUser = false }) {
             {courseData?.description || "Explore in-depth modules and interactive video lessons."}
           </p>
 
+          {/* Progress Bar if started */}
+          {progressPct > 0 && (
+            <div className="pt-2">
+              <div className="flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-400 font-semibold mb-1">
+                <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+                  <HiOutlineCheckCircle />
+                  {completedCount} of {chapterCount} done
+                </span>
+                <span>{progressPct}%</span>
+              </div>
+              <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1 overflow-hidden">
+                <div
+                  className="bg-emerald-500 h-full rounded-full transition-all"
+                  style={{ width: `${progressPct}%` }}
+                />
+              </div>
+            </div>
+          )}
+
           {/* Stat Footer */}
           <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
-            <span className="flex items-center gap-1.5 font-bold text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-2.5 py-1 rounded-lg">
+            <span className="flex items-center gap-1.5 font-bold text-cyan-700 dark:text-cyan-300 bg-cyan-500/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-2.5 py-1 rounded-lg">
               <HiOutlineBookOpen className="text-sm" />
               {chapterCount} Lessons
             </span>
 
             <Link
               href={`/course/${course?.courseId}/start`}
-              className="text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-purple-400 transition-colors flex items-center gap-1"
+              className="text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-cyan-400 transition-colors flex items-center gap-1"
             >
-              <span>Learn Now</span>
+              <span>{progressPct > 0 ? "Resume" : "Learn Now"}</span>
               <span>&rarr;</span>
             </Link>
           </div>

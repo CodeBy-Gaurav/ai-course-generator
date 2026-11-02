@@ -178,18 +178,18 @@ function CreateCourse() {
         {/* Header */}
         <div className="flex flex-col justify-center items-center mt-10 text-center">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-purple-300 bg-primary/10 dark:bg-purple-950/60 px-3 py-1 rounded-full">
-              AI Course Creator
+            <span className="text-xs uppercase tracking-widest font-bold text-cyan-700 dark:text-cyan-300 bg-cyan-500/10 dark:bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-full">
+              Curriculum Studio
             </span>
             <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-900 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800">
               {remainingCredits} of 5 Credits Left
             </span>
           </div>
           <h1 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-extrabold">
-            Create Your Course
+            Design Your Masterclass
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 max-w-md">
-            Fill in a few details and let AI design a tailored curriculum with videos and lessons.
+            Specify your subject and preferences. We'll assemble modular chapters with curated video tutorials and hands-on notes.
           </p>
         </div>
 
@@ -266,9 +266,9 @@ function CreateCourse() {
               <Button
                 disabled={checkStatus() || loading}
                 onClick={handleGenerateCourseLayout}
-                className="bg-primary hover:bg-primary/90 text-white px-8 rounded-xl font-semibold shadow-md"
+                className="bg-primary hover:bg-primary/90 text-white px-8 rounded-xl font-semibold shadow-md cursor-pointer"
               >
-                {loading ? "Generating Course..." : "✨ Generate Course Layout"}
+                {loading ? "Building Syllabus..." : "Generate Curriculum Outline →"}
               </Button>
             )}
           </div>

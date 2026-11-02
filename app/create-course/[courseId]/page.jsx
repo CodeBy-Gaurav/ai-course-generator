@@ -50,7 +50,7 @@ function CourseLayoutPage({ params }) {
     if (!course) return;
     setLoading(true);
     setErrorMessage("");
-    setStatusMessage("Generating in-depth lessons & fetching video tutorials in parallel...");
+    setStatusMessage("Assembling comprehensive lesson modules & curating HD tutorials...");
 
     const courseData = normalizeCourse(course);
     const chapters = courseData?.chapters || [];
@@ -131,7 +131,7 @@ function CourseLayoutPage({ params }) {
         <div className="mb-6">
           <Link
             href="/dashboard"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-purple-400 transition-colors bg-white dark:bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 shadow-2xs"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-cyan-400 transition-colors bg-white dark:bg-slate-900 px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 shadow-2xs"
           >
             <HiOutlineArrowLeft />
             Back to Dashboard
@@ -141,10 +141,10 @@ function CourseLayoutPage({ params }) {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h1 className="font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white">
-              Course Layout
+              Curriculum Architecture
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
-              Review and customize the outline before generating in-depth lessons and videos.
+              Review lessons, customize topics or artwork, and build your interactive masterclass.
             </p>
           </div>
           <Button
@@ -153,7 +153,7 @@ function CourseLayoutPage({ params }) {
             className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl shadow-md flex items-center gap-2 font-semibold cursor-pointer"
           >
             <HiOutlineSparkles className="text-lg" />
-            {loading ? "Generating Content..." : "Generate Full Course"}
+            {loading ? "Assembling Modules..." : "Build Complete Masterclass →"}
           </Button>
         </div>
 
@@ -176,9 +176,9 @@ function CourseLayoutPage({ params }) {
                 onClick={generateChapterContent}
                 disabled={loading || !course}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl px-8 shadow-md"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl px-8 shadow-md cursor-pointer"
               >
-                Generate Full Course
+                Build Complete Masterclass →
               </Button>
             </div>
           </>

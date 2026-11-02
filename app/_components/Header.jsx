@@ -15,6 +15,7 @@ import {
 } from "react-icons/hi2";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,20 +28,11 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-850 shadow-2xs transition-colors">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-white/[0.08] shadow-2xs transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-18">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Image
-              src="/logo.svg"
-              alt="AI Course Generator"
-              width={160}
-              height={45}
-              priority
-              className="transition-transform group-hover:scale-105 dark:brightness-125"
-            />
-          </Link>
+          <Logo href="/" size="md" />
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
@@ -52,8 +44,8 @@ function Header() {
                   href={link.href}
                   className={`text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-primary dark:text-purple-400 font-semibold"
-                      : "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-purple-400"
+                      ? "text-primary dark:text-cyan-400 font-semibold"
+                      : "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-cyan-400"
                   }`}
                 >
                   {link.name}
@@ -84,7 +76,7 @@ function Header() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex items-center gap-1.5 text-primary dark:text-purple-300 border-primary/30 dark:border-purple-500/30 hover:bg-primary/5 dark:hover:bg-purple-950/40 rounded-xl font-medium"
+                  className="flex items-center gap-1.5 text-primary dark:text-cyan-300 border-primary/30 dark:border-cyan-500/30 hover:bg-primary/5 dark:hover:bg-cyan-950/40 rounded-xl font-medium"
                 >
                   <HiOutlinePlusCircle className="text-base" />
                   Create Course

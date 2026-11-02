@@ -25,7 +25,7 @@ function ThemeToggle({ className = "" }) {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className={`relative p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-purple-400 hover:border-primary/40 dark:hover:border-purple-500/40 transition-all duration-200 shadow-2xs cursor-pointer group ${className}`}
+      className={`relative p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-cyan-400 hover:border-primary/40 dark:hover:border-cyan-500/40 transition-all duration-200 shadow-2xs cursor-pointer group ${className}`}
     >
       <div className="relative w-5 h-5 flex items-center justify-center">
         {isDark ? (

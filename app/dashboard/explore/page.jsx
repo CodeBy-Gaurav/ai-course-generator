@@ -12,7 +12,7 @@ import {
   HiOutlineBookOpen,
 } from "react-icons/hi2";
 
-const CATEGORIES = ["All", "Programming", "Health", "Creative"];
+const CATEGORIES = ["All", "Tech", "AI", "Business", "Design", "Health", "Science"];
 
 function DashboardExplorePage() {
   const [courses, setCourses] = useState([]);
@@ -50,7 +50,10 @@ function DashboardExplorePage() {
 
     const matchesCategory =
       selectedCategory === "All" ||
-      category.includes(selectedCategory.toLowerCase());
+      category.includes(selectedCategory.toLowerCase()) ||
+      (selectedCategory === "Tech" && category.includes("program")) ||
+      (selectedCategory === "AI" && (category.includes("ai") || category.includes("data"))) ||
+      (selectedCategory === "Design" && (category.includes("design") || category.includes("creative")));
 
     return matchesSearch && matchesCategory;
   });
@@ -59,15 +62,15 @@ function DashboardExplorePage() {
     <div className="space-y-8">
       {/* Header Banner */}
       <div>
-        <div className="flex items-center gap-2 text-primary dark:text-purple-400 font-bold text-xs uppercase tracking-wider">
+        <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider">
           <HiOutlineSparkles />
           <span>Discover Community Courses</span>
         </div>
         <h1 className="font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white mt-1">
-          Explore All AI Courses
+          Explore Community Masterclasses
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Search and learn from public courses published across all categories.
+          Search and learn from community courses published across all categories.
         </p>
       </div>
 
@@ -116,7 +119,7 @@ function DashboardExplorePage() {
       {/* Results Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-          <HiOutlineBookOpen className="text-primary dark:text-purple-400" />
+          <HiOutlineBookOpen className="text-cyan-600 dark:text-cyan-400" />
           <span>Courses ({filteredCourses.length})</span>
         </h2>
       </div>

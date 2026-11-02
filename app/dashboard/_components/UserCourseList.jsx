@@ -57,12 +57,17 @@ function UserCourseList() {
     const query = searchQuery.toLowerCase().trim();
 
     const matchesSearch = query === "" || name.includes(query) || category.includes(query);
-    const matchesCategory = filterCategory === "All" || category.includes(filterCategory.toLowerCase());
+    const matchesCategory =
+      filterCategory === "All" ||
+      category.includes(filterCategory.toLowerCase()) ||
+      (filterCategory === "Tech" && category.includes("program")) ||
+      (filterCategory === "AI" && (category.includes("ai") || category.includes("data"))) ||
+      (filterCategory === "Design" && (category.includes("design") || category.includes("creative")));
 
     return matchesSearch && matchesCategory;
   });
 
-  const categories = ["All", "Programming", "Health", "Creative"];
+  const categories = ["All", "Tech", "AI", "Business", "Design", "Health", "Science"];
 
   return (
     <div className="mt-10 space-y-6">
@@ -70,13 +75,13 @@ function UserCourseList() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="font-extrabold text-2xl text-slate-900 dark:text-white flex items-center gap-2">
-            <span>My AI Courses</span>
-            <span className="text-xs font-bold bg-primary/10 dark:bg-purple-950/60 text-primary dark:text-purple-300 px-2.5 py-0.5 rounded-full">
+            <span>My Learning Library</span>
+            <span className="text-xs font-bold bg-cyan-500/10 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 px-2.5 py-0.5 rounded-full">
               {courseList?.length || 0}
             </span>
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Continue learning or create a new curriculum on any topic.
+            Continue where you left off or start a new masterclass.
           </p>
         </div>
 
@@ -86,7 +91,7 @@ function UserCourseList() {
             <div className="relative w-full sm:w-60">
               <HiOutlineMagnifyingGlass className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm" />
               <Input
-                placeholder="Search my courses..."
+                placeholder="Search your library..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-9 h-9 text-xs rounded-xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100"
@@ -148,16 +153,16 @@ function UserCourseList() {
             </Button>
           </div>
         ) : (
-          <div className="col-span-full py-16 text-center border-2 border-dashed border-purple-200 dark:border-purple-900/40 rounded-3xl p-8 bg-gradient-to-b from-purple-50/40 to-white dark:from-purple-950/20 dark:to-slate-950 space-y-4">
-            <div className="w-16 h-16 rounded-3xl bg-primary/10 dark:bg-purple-950/60 text-primary dark:text-purple-300 text-3xl flex items-center justify-center mx-auto shadow-xs">
+          <div className="col-span-full py-16 text-center border-2 border-dashed border-slate-300 dark:border-zinc-800 rounded-3xl p-8 bg-gradient-to-b from-slate-50/50 to-white dark:from-zinc-900/40 dark:to-zinc-950 space-y-4">
+            <div className="w-16 h-16 rounded-3xl bg-cyan-500/10 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-300 border border-cyan-500/20 text-3xl flex items-center justify-center mx-auto shadow-xs">
               <HiOutlineAcademicCap />
             </div>
             <div className="space-y-1 max-w-sm mx-auto">
               <h3 className="font-bold text-lg text-slate-900 dark:text-white">
-                You haven&apos;t created any courses yet
+                Your library is ready
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Generate your first comprehensive AI course complete with chapters and video tutorials in seconds.
+                Build your first personalized masterclass complete with video lessons and interactive notes.
               </p>
             </div>
             <Link href="/create-course" className="inline-block pt-2">

@@ -14,6 +14,7 @@ import {
 } from "react-icons/hi2";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/app/_components/ThemeToggle";
+import Logo from "@/app/_components/Logo";
 
 function DashboardHeader() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -42,20 +43,13 @@ function DashboardHeader() {
             )}
           </button>
 
-          <Link href="/dashboard" className="flex items-center gap-2">
-            <Image
-              src="/logo.svg"
-              width={140}
-              height={40}
-              alt="Logo"
-              priority
-              className="md:hidden dark:brightness-125"
-            />
-          </Link>
+          <div className="md:hidden">
+            <Logo href="/dashboard" size="sm" showTag={false} />
+          </div>
 
           {/* Desktop Breadcrumb Navigation */}
           <div className="hidden md:flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 font-medium">
-            <Link href="/dashboard" className="hover:text-primary dark:hover:text-purple-400 transition-colors">
+            <Link href="/dashboard" className="hover:text-primary dark:hover:text-cyan-400 transition-colors">
               Dashboard
             </Link>
             {pathname.includes("/explore") && (
@@ -111,7 +105,7 @@ function DashboardHeader() {
                 onClick={() => setMobileNavOpen(false)}
                 className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                   isActive
-                    ? "bg-primary/10 dark:bg-purple-950/50 text-primary dark:text-purple-300 font-semibold"
+                    ? "bg-cyan-500/10 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-300 font-semibold border border-cyan-500/20"
                     : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >

@@ -51,7 +51,7 @@ function TopicDescription() {
           {/* Quick topic suggestion pills */}
           <div className="mt-3">
             <p className="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1 mb-2">
-              <HiOutlineSparkles className="text-primary dark:text-purple-400" /> Popular ideas:
+              <HiOutlineSparkles className="text-cyan-600 dark:text-cyan-400" /> Popular ideas:
             </p>
             <div className="flex flex-wrap gap-2">
               {SUGGESTIONS.map((suggestion, index) => (
@@ -59,7 +59,7 @@ function TopicDescription() {
                   key={index}
                   type="button"
                   onClick={() => handleInputChange("topic", suggestion)}
-                  className="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 hover:text-primary dark:hover:bg-purple-950/60 dark:hover:text-purple-300 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-full transition-colors font-medium cursor-pointer"
+                  className="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-cyan-500/10 hover:text-cyan-600 dark:hover:bg-cyan-950/60 dark:hover:text-cyan-300 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-full transition-colors font-medium cursor-pointer"
                 >
                   + {suggestion}
                 </button>

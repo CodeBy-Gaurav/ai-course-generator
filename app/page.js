@@ -1,8 +1,10 @@
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
+import LiveMetricsStrip from "./_components/LiveMetricsStrip";
 import FeaturesBento from "./_components/FeaturesBento";
 import HowItWorks from "./_components/HowItWorks";
 import LiveCourseShowcase from "./_components/LiveCourseShowcase";
+import TestimonialSection from "./_components/TestimonialSection";
 import PricingSection from "./_components/PricingSection";
 import CTASection from "./_components/CTASection";
 import Footer from "./_components/Footer";
@@ -16,22 +18,28 @@ export default function Home() {
       {/* 2. Modern Tech Hero with Interactive App Mockup Preview */}
       <Hero />
 
-      {/* 3. High-Tech Features Bento Grid */}
+      {/* 3. Live Metrics Strip */}
+      <LiveMetricsStrip />
+
+      {/* 4. High-Tech Features Bento Grid */}
       <FeaturesBento />
 
-      {/* 4. 3-Step Interactive Process */}
+      {/* 5. 3-Step Interactive Process */}
       <HowItWorks />
 
-      {/* 5. Real Live Community Masterclasses */}
+      {/* 6. Real Live Community Masterclasses */}
       <LiveCourseShowcase />
 
-      {/* 6. Pricing Section (Free 5 Credits vs ₹499 Pro) */}
+      {/* 7. Verified Learner Testimonials */}
+      <TestimonialSection />
+
+      {/* 8. Pricing Section (Free 5 Credits vs ₹499 Pro) */}
       <PricingSection />
 
-      {/* 7. Conversion Bottom CTA */}
+      {/* 9. Conversion Bottom CTA */}
       <CTASection />
 
-      {/* 8. Tech Footer */}
+      {/* 10. Tech Footer */}
       <Footer />
     </div>
   );

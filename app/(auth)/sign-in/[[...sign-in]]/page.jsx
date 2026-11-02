@@ -11,77 +11,77 @@ import {
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-center">
+    <div className="min-h-screen bg-slate-50 dark:bg-black flex flex-col justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
         {/* Left Side: Branding & Value Props */}
-        <div className="hidden lg:flex lg:col-span-6 xl:col-span-5 flex-col justify-between p-12 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-950 text-white relative overflow-hidden">
+        <div className="hidden lg:flex lg:col-span-6 xl:col-span-5 flex-col justify-between p-12 bg-gradient-to-br from-zinc-950 via-slate-900 to-black text-white relative overflow-hidden border-r border-white/[0.08]">
           {/* Subtle background glow */}
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-purple-200 hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full backdrop-blur-xs"
+              className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full backdrop-blur-xs"
             >
               <HiOutlineArrowLeft />
               Back to Home
             </Link>
 
             <div className="mt-16 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-purple-300 text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-semibold uppercase tracking-wider">
                 <HiOutlineSparkles />
                 AI-Powered Learning
               </div>
               <h1 className="text-4xl xl:text-5xl font-extrabold leading-tight tracking-tight">
                 Unlock Your Personal Learning Journey.
               </h1>
-              <p className="text-purple-200 text-base leading-relaxed max-w-md">
-                Create structured, multi-chapter video masterclasses on any topic with the power of Google Gemini AI.
+              <p className="text-slate-300 text-base leading-relaxed max-w-md">
+                Create structured, multi-chapter video masterclasses on any topic with tailored curriculums and curated video lessons.
               </p>
             </div>
           </div>
 
           {/* Feature Bullets */}
-          <div className="space-y-4 relative z-10 pt-10 border-t border-purple-800/50">
+          <div className="space-y-4 relative z-10 pt-10 border-t border-slate-800">
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+              <div className="p-2 rounded-xl bg-zinc-800/80 text-cyan-400 border border-zinc-700/50 text-xl shrink-0">
                 <HiOutlineSparkles />
               </div>
               <div>
                 <h4 className="font-semibold text-sm">Instant Curriculum Outlines</h4>
-                <p className="text-xs text-purple-200 mt-0.5">
+                <p className="text-xs text-slate-400 mt-0.5">
                   AI writes comprehensive lesson summaries and key takeaways.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+              <div className="p-2 rounded-xl bg-zinc-800/80 text-cyan-400 border border-zinc-700/50 text-xl shrink-0">
                 <HiOutlineVideoCamera />
               </div>
               <div>
                 <h4 className="font-semibold text-sm">Automated Video Lessons</h4>
-                <p className="text-xs text-purple-200 mt-0.5">
-                  Embeds top-rated YouTube tutorials for every lesson.
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Embeds curated video tutorials and playlists for every lesson.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-xl bg-purple-800/60 text-purple-300 text-xl shrink-0">
+              <div className="p-2 rounded-xl bg-zinc-800/80 text-cyan-400 border border-zinc-700/50 text-xl shrink-0">
                 <HiOutlineAcademicCap />
               </div>
               <div>
                 <h4 className="font-semibold text-sm">Interactive Code & Notes</h4>
-                <p className="text-xs text-purple-200 mt-0.5">
+                <p className="text-xs text-slate-400 mt-0.5">
                   Syntax-highlighted code blocks with 1-click copy.
                 </p>
               </div>
             </div>
           </div>
 
-          <p className="text-xs text-purple-300/80 relative z-10">
+          <p className="text-xs text-slate-500 relative z-10">
             &copy; {new Date().getFullYear()} AI Course Generator. All rights reserved.
           </p>
         </div>

@@ -63,7 +63,7 @@ function CourseBasicInfo({ course, refreshData, edit = true }) {
           <p className="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
             {courseData?.description}
           </p>
-          <div className="flex items-center gap-2 mt-4 text-primary dark:text-purple-400 font-semibold text-sm">
+          <div className="flex items-center gap-2 mt-4 text-cyan-600 dark:text-cyan-400 font-semibold text-sm">
             <HiOutlinePuzzlePiece className="text-lg" />
             <span className="capitalize">{courseData?.category}</span>
           </div>

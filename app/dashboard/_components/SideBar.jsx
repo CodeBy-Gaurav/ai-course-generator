@@ -13,6 +13,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { UserCourseListContext } from "@/app/_context/UserCourseListContext";
 import { useClerk } from "@clerk/nextjs";
+import Logo from "@/app/_components/Logo";
 
 function Sidebar() {
   const { userCourseList } = useContext(UserCourseListContext);
@@ -48,10 +49,10 @@ function Sidebar() {
   return (
     <aside className="fixed h-full md:w-64 p-5 shadow-2xs border-r border-slate-100 dark:border-slate-850 bg-white dark:bg-slate-950 flex flex-col justify-between select-none transition-colors">
       <div>
-        <Link href="/dashboard" className="block py-1">
-          <Image src="/logo.svg" width={160} height={48} alt="Logo" priority className="dark:brightness-125" />
-        </Link>
-        <hr className="my-5 border-slate-100 dark:border-slate-800" />
+        <div className="py-1">
+          <Logo href="/dashboard" size="md" />
+        </div>
+        <hr className="my-5 border-slate-100 dark:border-slate-850" />
 
         <ul className="space-y-1.5">
           {Menu.map((item) => {
@@ -62,7 +63,7 @@ function Sidebar() {
                   <div
                     className={`flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-medium transition-all ${
                       isActive
-                        ? "bg-primary/10 dark:bg-purple-950/50 text-primary dark:text-purple-300 font-semibold shadow-2xs"
+                        ? "bg-cyan-500/10 dark:bg-cyan-950/40 text-cyan-700 dark:text-cyan-400 font-semibold border border-cyan-500/20 shadow-2xs"
                         : "text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white"
                     }`}
                   >
@@ -89,16 +90,16 @@ function Sidebar() {
       </div>
 
       {/* Credit Wallet Widget */}
-      <div className="p-4 border border-purple-100 dark:border-purple-900/40 rounded-2xl bg-gradient-to-br from-purple-50/70 to-indigo-50/70 dark:from-purple-950/30 dark:to-indigo-950/30 space-y-3 mb-3 shadow-2xs">
+      <div className="p-4 border border-slate-200 dark:border-white/[0.08] rounded-2xl bg-slate-50 dark:bg-zinc-900/80 space-y-3 mb-3 shadow-2xs">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1">
-            <HiOutlineSparkles className="text-primary dark:text-purple-400" />
-            Credits Wallet
+            <HiOutlineSparkles className="text-cyan-600 dark:text-cyan-400" />
+            Course Credits
           </span>
           <span
             className={`text-xs font-extrabold px-2 py-0.5 rounded-full ${
               remainingCredits > 0
-                ? "bg-primary/10 dark:bg-purple-900/60 text-primary dark:text-purple-300"
+                ? "bg-cyan-500/10 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20"
                 : "bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400"
             }`}
           >
@@ -106,7 +107,7 @@ function Sidebar() {
           </span>
         </div>
 
-        <Progress value={progressValue} className="h-2 bg-purple-200/50 dark:bg-purple-900/40" />
+        <Progress value={progressValue} className="h-2 bg-slate-200 dark:bg-zinc-800" />
 
         <div className="space-y-1">
           <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
@@ -118,13 +119,13 @@ function Sidebar() {
             </p>
           ) : (
             <p className="text-[11px] text-slate-500 dark:text-slate-400">
-              Upgrade for unlimited AI course creation.
+              Upgrade for unlimited masterclass creation.
             </p>
           )}
         </div>
 
         <Link href="/dashboard/upgrade" className="block pt-1">
-          <span className="text-xs font-bold text-primary dark:text-purple-400 hover:underline flex items-center gap-1">
+          <span className="text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:underline flex items-center gap-1">
             Upgrade for ₹499/mo &rarr;
           </span>
         </Link>
